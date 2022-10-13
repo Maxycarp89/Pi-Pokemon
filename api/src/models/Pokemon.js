@@ -7,13 +7,12 @@ module.exports = (sequelize) => {
     id: {
       type: DataTypes.UUID,
       defaultValue: DataTypes.UUIDV4,
+      allowNull: false,
       primaryKey: true,
-      unique: true,
     },
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-
     },
     hp: {
       type: DataTypes.STRING,
@@ -46,4 +45,48 @@ module.exports = (sequelize) => {
     updatedAt: false,
   })
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
