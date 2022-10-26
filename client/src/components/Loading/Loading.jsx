@@ -1,13 +1,15 @@
 import React from 'react';
-
+import styles from './Loading.module.css'
 
 const Loading = () => {
 
     return ( 
         <div className={styles.div}>
-           <img src="https://www.ytechweb.com/wp-content/uploads/2016/07/ncwj3hkmpxep6po5cooz.gif" alt="cargando.." />
+            <div className={styles.preloader}></div>
         </div>
      );
 }
  
 export default Loading;
+
+

@@ -1,33 +1,56 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import noImage from "../../img/noImage.png";
+import noImage from '../../img/noImage.png';
+import styles from './Card.module.css'
 
-function Card(name, image, types, id) {
-  return (
-    <div>
-      <NavLink to={`/pokemon/${id}`}>
+export default function Card({name, image, types, id}) {
+    
+    // console.log(name, image, types)
+    return(
         <div>
-          <img
-            src={image ? image : noImage}
-            alt="img not found"
-            width="250px"
-            height="250vh"
-          />
-          <h2>{name.charAt(0).toUpperCase() + name.slice(1)} </h2>
-          <div>
-            {types?.map((e, k) => {
-              return (
-                <div key={k}>
-                  <img src={e.img} alt="X" />
-                  <p>{e.name.charAt(0).toUpperCase() + e.name.slice(1)}</p>
+            <NavLink className={styles.none} to={`/pokemon/${id}`}>
+                <div>
+                    <img className={styles.img} src={image ? image : noImage} alt="img not found" width="200px" height="200vh" />
+                    <h2>{name.charAt(0).toUpperCase() + name.slice(1)}</h2>
+                    <div className={styles.types}>
+                        {
+                            types?.map((e, k) => {
+                                return (
+                                    <div className={styles.types} key={k}>
+                                        <img className={styles.typesImg} src={e.img} alt='X' />
+                                        <p className={styles.text}>{e.name.charAt(0).toUpperCase() + e.name.slice(1)}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
-              );
-            })}
-          </div>
+            </NavLink>
         </div>
-      </NavLink>
-    </div>
-  );
-}
+    );
+};
 
-export default Card;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
