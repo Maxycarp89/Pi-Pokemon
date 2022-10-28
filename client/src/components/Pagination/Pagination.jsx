@@ -20,7 +20,7 @@ const Pagination = ({pokemonsPerPage, allPokemons, pagination}) => {
                 }
             </ul>
         </nav>
-     );
+     ); 
 }
  
 export default Pagination;
