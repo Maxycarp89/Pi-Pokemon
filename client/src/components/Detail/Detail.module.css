@@ -5,29 +5,30 @@
     justify-content: center;
     align-items: center;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .card {
-    margin-top: 2%;
-    width: 30vw;
-    height: 40vw;
+    margin-top: 1%;
+    width: 25vw;
+    height: 45vw;
     border-radius: 10px;
-    padding: 10px;
-    background-color: rgba(255, 228, 196, 0.616);
-    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.651);
+    padding: 1px;
+    background-color: rgba(124, 122, 119, 0.616);
+    box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.445);
 }
 
 .h2 {
+    margin-top: auto;
     font-family: 'Verdana', sans-serif;
     font-size: 1.5rem;
-    color: rgba(48, 30, 9, 0.616);
+    color: rgba(10, 10, 10, 0.959);
 }
 
 .p {
     font-family: 'Verdana', sans-serif;
     font-size: 1rem;
-    color: rgba(48, 30, 9, 0.616);
+    color: rgba(5, 5, 5, 0.938);
 }
 
 .types {
@@ -35,7 +36,7 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     text-decoration: none;
 }
 
@@ -48,13 +49,14 @@
     text-decoration: none;
     font-family: 'Verdana', sans-serif;
     font-size: 0.8rem;
-    color: rgba(48, 30, 9, 0.616);
+    color: rgba(19, 18, 18, 0.897);
 }
 
 .h5 {
     font-family: 'Verdana', sans-serif;
-    font-size: 0.8rem;
-    color: rgba(48, 30, 9, 0.616);
+    font-size: 0.6rem;
+    color: rgba(12, 12, 11, 0.993);
+    margin-bottom: 2%;
 }
 
 .btn {
@@ -62,8 +64,8 @@
     text-decoration: none;
     width: 8vw;
     height: 5vh;
-    background-color: #f3cf3d4d;
-    color: rgb(184, 184, 184);
+    background-color: #80f33de3;
+    color: rgb(12, 12, 12);
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.651);
@@ -75,5 +77,5 @@
 
 .btn:hover {
     color: white;
-    background-color: rgba(48, 30, 9, 0.616)
+    background-color: rgba(240, 225, 16, 0.938)
 }

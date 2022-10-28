@@ -9,6 +9,7 @@ function Nav() {
       <nav className={styles.nav}>
         <div>
             <img src={pokemonImg} alt="img not found" className={styles.img} />
+            <img src="https://www.pngplay.com/wp-content/uploads/11/Pikachu-Pokemon-PNG-Photo-Image.png" alt="img not found"className="gif" height="9 0px" width= "150px" />
         </div>
         <div>
             <Link to = '/create'>
