@@ -44,7 +44,7 @@ router.post("/", async (req, res) => {
   const { name, hp, attack, defense, speed, height, weight, img, types } =
     req.body;
   try {
-    console.log(name, hp, attack, defense, speed, height, weight, img);
+    //console.log(name, hp, attack, defense, speed, height, weight, img);
     if (name) {
       const allPoke = await getAllPokemon();
       const isPoke = allPoke.find((e) => e.name === name.toLowerCase());
