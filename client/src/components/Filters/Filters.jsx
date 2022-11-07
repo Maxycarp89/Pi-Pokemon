@@ -43,7 +43,7 @@ const Filters =  ({setCurrentPage, setOrder}) => {
   return ( 
     <div className={styles.div}>
       <div>
-      <SearchBar />
+      <SearchBar setCurrentPage={setCurrentPage} />
       </div>
       <div >
         <h4 className={styles.h4}>Filters</h4>

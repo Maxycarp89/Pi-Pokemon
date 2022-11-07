@@ -33,6 +33,7 @@ function Home() {
         e.preventDefault();
         dispatch(cleanPokemons(dispatch));
         dispatch(getPokemons());
+      
     }
 
 

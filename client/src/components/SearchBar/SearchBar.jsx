@@ -4,7 +4,8 @@ import { useDispatch } from "react-redux";
 import { getPokemonByName, cleanPokemons } from '../../actions';
 import styles from './SearchBar.module.css'
 
-const SearchBar = () => {
+ 
+const SearchBar = ({setCurrentPage}) => {
     
     const dispatch = useDispatch();
     const [name, setName] = useState('');
@@ -19,6 +20,7 @@ const SearchBar = () => {
         e.preventDefault();
         dispatch(cleanPokemons(dispatch));
         dispatch(getPokemonByName(name));
+        setCurrentPage(1)
         setName('');
     }
 

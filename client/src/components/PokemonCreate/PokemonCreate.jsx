@@ -73,7 +73,7 @@ const PokemonCreate = () => {
     }
 
     const handleSelect = e => {
-        if (input.types.length < 2) {
+        if (input.types.length < 2 ) {
             setInput({
                 ...input,
                 types: [...input.types, e.target.value]
@@ -121,7 +121,9 @@ const PokemonCreate = () => {
         setInput({
             ...input,
             types: input.types.filter(type => type !== e)
+            
         })
+       //console.log(types);
     }
 
     useEffect(() => {
