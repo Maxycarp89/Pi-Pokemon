@@ -43,7 +43,8 @@ router.get("/:id", async (req, res) => {
 router.post("/", async (req, res) => {
   const { name, hp, attack, defense, speed, height, weight, img, types } =
     req.body;
-  try {
+  
+    try {
     //console.log(name, hp, attack, defense, speed, height, weight, img);
     if (name) {
       const allPoke = await getAllPokemon();
@@ -68,7 +69,7 @@ router.post("/", async (req, res) => {
         pokemon.addType(typeDb);
         return res.status(201).send(pokemon);
       }
-      return res.status(404).send("Pokemon name already exist");
+       return res.status(404).send("Pokemon name already exist");
     }
     if (!name) return res.status(404).send("Pokemon name is obligatory");
   } catch (e) {

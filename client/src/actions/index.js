@@ -13,19 +13,19 @@ export const CLEAN_POKEMONS = 'CLEAN_POKEMONS';
 
 
 export function getPokemons() {
-    return async function (dispatch){
+    return async function (dispatch) {
         try {
             console.log("entre")
-           // let url = 'http://localhost:3001/pokemons';
+            // let url = 'http://localhost:3001/pokemons';
             let json = await axios("http://localhost:3001/pokemons");
-            console.log("soy la data",json.data);
+            console.log("soy la data", json.data);
             return dispatch({
                 type: GET_POKEMONS,
                 payload: json.data
             });
         } catch (e) {
             console.log(e);
-        };     
+        };
     };
 };
 
@@ -47,7 +47,7 @@ export const getAlltypes = () => {
                 payload: json.data
             });
         } catch (e) {
-          console.log(e);  
+            console.log(e);
         };
     };
 };
@@ -93,7 +93,7 @@ export const getPokemonByName = (name) => {
             window.location.href = "http://localhost:3000/home";
             console.log(e);
         };
-    };    
+    };
 };
 
 // export const getDetail = (id) => {
@@ -113,12 +113,12 @@ export const getPokemonByName = (name) => {
 export function getDetailPromise(id) {
     return function (dispatch) {
         axios.get(`http://localhost:3001/pokemons/${id}`)
-        .then(res => res.data)
-        .then(res => dispatch({
-            type: GET_DETAILS,
-            payload: res
-        }))
-        .catch(err => console.log(err))
+            .then(res => res.data)
+            .then(res => dispatch({
+                type: GET_DETAILS,
+                payload: res
+            }))
+            .catch(err => console.log(err))
     }
 }
 
@@ -130,15 +130,15 @@ export const cleanDetail = (dispatch) => {
     })
 };
 
-export const postPokemon = (payload) => {
-    return async () => {
+export function postPokemon(payload) {
+
+    return async function () {
         try {
-            var createPoke = await axios.post('http://localhost:3001/pokemons', payload);
+            const createPoke = await axios.post('http://localhost:3001/pokemons', payload);
             console.log(createPoke);
-            alert('New pokemón is created!');
             return createPoke;
         } catch (e) {
-            alert('Pokemon name already exist')
+            alert('No existen datos')
             console.log(e);
         }
     };

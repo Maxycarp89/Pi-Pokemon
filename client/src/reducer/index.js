@@ -64,14 +64,31 @@ const rootReducer = (state = initialState, action) => {
                 pokemons: typeFiltered
             };
         case ORDER_NAME:
-            let copy3 = state.pokemons;
-            let sortedName = action.payload === 'asc' ?
-                copy3.sort((a, b) => {
-                    return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
+            // let copy3 = state.pokemons;
+            console.log(action.payload)
+            const sortedName = action.payload === "A - Z" ?
+                state.pokemons.sort(function (a, b) {
+                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                        return 1;
+                     }
+                     if (b.name.toLowerCase() > a.name.toLowerCase()) {
+                        return -1;
+                     }
+                     return 0;
+                    // return a.name.toLowerCase().localeCompare(b.name.toLowerCase())
                 }) :
-                copy3.sort((a, b) => {
-                    return b.name.toLowerCase().localeCompare(a.name.toLowerCase())
-                })
+                state.pokemons.sort(function (a, b) {
+                    if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                       return -1;
+                    }
+                    if (b.name.toLowerCase() > a.name.toLowerCase()) {
+                       return 1;
+                    }
+                    return 0;
+                 });
+                // copy3.sort((a, b) => {
+                    // return b.name.toLowerCase().localeCompare(a.name.toLowerCase())
+                // })
             return {
                 ...state,
                 pokemons: sortedName
